@@ -1,0 +1,23 @@
+lastlocation:
+  world: Dayz
+  x: 7031.114496080953
+  y: 112.0
+  z: 11746.026695059623
+  yaw: 356.84995
+  pitch: 70.94999
+lastAccountName: MoruqNaber
+timestamps:
+  login: 1592411429541
+  logout: 1592411908268
+  lastteleport: 1592056971087
+ipAddress: 78.185.135.234
+geolocation: Turkey
+logoutlocation:
+  world: Dayz
+  x: 7031.329974093177
+  y: 112.0
+  z: 11746.048922045307
+  yaw: 31.949896
+  pitch: 45.450016
+afk: false
+godmode: false

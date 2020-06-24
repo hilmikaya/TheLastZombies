@@ -1,0 +1,243 @@
+Events:
+	Consent:
+		ID: consent
+		Patterns:
+			skript-mirror, I know what I'm doing
+		Event values:
+			none
+	Define Condition:
+		ID: define_condition
+		Patterns:
+			[(1¦local)] condition <.+>
+			[(1¦local)] condition
+			[(1¦local)] %*classinfos% property condition <.+>
+		Event values:
+			none
+	Define Constant:
+		ID: define_constant
+		Patterns:
+			option <.+>
+		Event values:
+			none
+	Define Effect:
+		ID: define_effect
+		Patterns:
+			[(1¦local)] effect <.+>
+			[(1¦local)] effect
+		Event values:
+			none
+	Define Expression:
+		ID: define_expression
+		Patterns:
+			[(2¦local)] [(1¦(plural|non(-|[ ])single))] expression <.+>
+			[(2¦local)] [(1¦(plural|non(-|[ ])single))] expression
+			[(2¦local)] [(1¦(plural|non(-|[ ])single))] %*classinfos% property <.+>
+		Event values:
+			none
+	Import:
+		ID: import
+		Patterns:
+			import
+		Event values:
+			none
+	On Bukkit Event:
+		ID: bukkit_event
+		Patterns:
+			[on] [(1¦all)] %javatypes% [(at|on|with) priority <.+>]
+		Event values:
+			none
+		Cancellable: true
+Conditions:
+	CondExpressionStatement:
+		ID: CondExpressionStatement
+		Patterns:
+			[(1¦await)] %~javaobject%
+	CondIsInstanceOf:
+		ID: CondIsInstanceOf
+		Patterns:
+			%objects% (is|are) [a[n]] instance[s] of %javatypes%
+			%objects% (is not|isn't|are not|aren't) [a[n]] instance[s] of %javatypes%
+	CondParseLater:
+		ID: CondParseLater
+		Patterns:
+			(parse[d] later) <.+>
+Effects:
+	EffContinue:
+		ID: EffContinue
+		Patterns:
+			continue [if (%-boolean%|<.+>)]
+	EffDelayEffect:
+		ID: EffDelayEffect
+		Patterns:
+			delay [the] [current] effect
+	EffExpressionStatement:
+		ID: EffExpressionStatement
+		Patterns:
+			[(1¦await)] %~javaobject%
+	EffImport:
+		ID: EffImport
+		Patterns:
+			import <((?:[_a-zA-Z$][\w$]*\.)*(?:[_a-zA-Z$][\w$]*))(?:\s+as ([_a-zA-Z$][\w$]*))?>
+	EffNegateCondition:
+		ID: EffNegateCondition
+		Patterns:
+			negate [the] [current] condition
+	EffReturn:
+		ID: EffReturn
+		Patterns:
+			return [%-objects%]
+Expressions:
+	ExprArrayAccess:
+		ID: ExprArrayAccess
+		Return type: Object
+		Changers:
+			set
+			delete
+		Patterns:
+			%javaobject%\[%number%\]
+	ExprBits:
+		ID: ExprBits
+		Return type: Number
+		Changers:
+			unknown
+		Patterns:
+			[the] (0¦bit %-number%|1¦bit(s| range) [from] %-number%( to |[ ]-[ ])%-number%) of %numbers%
+			%numbers%'[s] (0¦bit %-number%|1¦bit(s| range) [from] %-number%( to |[ ]-[ ])%-number%)
+	ExprChangeValue:
+		ID: ExprChangeValue
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[the] change value[(1¦s)]
+	ExprCollect:
+		ID: ExprCollect
+		Return type: javaobject
+		Changers:
+			none
+		Patterns:
+			\[%objects%[ as %-javatype%[ ]]\]
+	ExprEvent:
+		ID: ExprEvent
+		Return type: event
+		Changers:
+			none
+		Patterns:
+			[the] event
+	ExprEventClasses:
+		ID: ExprEventClasses
+		Return type: javatype
+		Changers:
+			none
+		Patterns:
+			event-classes
+	ExprExpression:
+		ID: ExprExpression
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[the] expr[ession][(1¦s)](-| )<\d+>
+	ExprFunction:
+		ID: ExprFunction
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[the] function(s| [reference[s]]) %strings% [called with [[the] [arg[ument][s]]] %-objects%]
+	ExprJavaCall:
+		ID: ExprJavaCall
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[(2¦try)] %object%..%string%(0¦!|1¦([%-objects%]))
+			[(2¦try)] %object%.<[^!(]*[^!(\s]>(0¦!|1¦([%-objects%]))
+			[(2¦try)] [a] new %javatype%([%-objects%])
+	ExprJavaError:
+		ID: ExprJavaError
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[the] [last] [java] (throwable|exception|error)
+	ExprJavaType:
+		ID: ExprJavaType
+		Return type: javatype
+		Changers:
+			none
+		Patterns:
+			[the] [java] class %string%
+	ExprJavaTypeOf:
+		ID: ExprJavaTypeOf
+		Return type: javatype
+		Changers:
+			none
+		Patterns:
+			[the] [java] class[es] of %objects%
+			%objects%'[s] [java] class[es]
+	ExprMatchedPattern:
+		ID: ExprMatchedPattern
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] [matched] pattern
+	ExprMemberNames:
+		ID: ExprMemberNames
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (0¦field|1¦method) names of %objects%
+			%objects%'[s] (0¦field|1¦method) names
+	ExprMembers:
+		ID: ExprMembers
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (0¦fields|1¦methods|2¦constructors) of %objects%
+			%objects%'[s] (0¦fields|1¦methods|2¦constructors)
+	ExprParseMark:
+		ID: ExprParseMark
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] [parse[r]] mark
+	ExprParseRegex:
+		ID: ExprParseRegex
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] [parse[r]] (regex|regular expression)(-| )<\d+>
+	ExprProxy:
+		ID: ExprProxy
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[a] [new] proxy [instance] of %javatypes% (using|from) %objects%
+	ExprRawExpression:
+		ID: ExprRawExpression
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[the] raw %objects%
+	ExprSpread:
+		ID: ExprSpread
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			...%object%
+	LitNullObject:
+		ID: LitNullObject
+		Return type: null
+		Changers:
+			none
+		Patterns:
+			null

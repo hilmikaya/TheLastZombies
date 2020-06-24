@@ -1,0 +1,364 @@
+[20:03:35] [Server thread/INFO]: Loading properties
+[20:03:35] [Server thread/INFO]: Default game type: SURVIVAL
+[20:03:36] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-596221b-9a1fc1e (MC: 1.12) (Implementing API version 1.12-R0.1-SNAPSHOT)
+[20:03:36] [Server thread/WARN]: Unable to read file whitelist.json, backing it up to {0}.backup and creating new copy.
+com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 2 path $[0]
+	at net.minecraft.server.v1_12_R1.ChatDeserializer.a(SourceFile:506) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.ChatDeserializer.a(SourceFile:522) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.JsonList.load(JsonList.java:174) [spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.DedicatedPlayerList.D(SourceFile:123) [spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.DedicatedPlayerList.<init>(SourceFile:30) [spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.DedicatedServer.init(DedicatedServer.java:183) [spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:544) [spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 2 path $[0]
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1401) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:593) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:81) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:61) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	at net.minecraft.server.v1_12_R1.ChatDeserializer.a(SourceFile:504) ~[spigot-1.12.jar:git-Spigot-596221b-9a1fc1e]
+	... 7 more
+[20:03:36] [Server thread/INFO]: Debug logging is disabled
+[20:03:36] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:03:36] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[20:03:36] [Server thread/INFO]: Generating keypair
+[20:03:36] [Server thread/INFO]: Starting Minecraft server on *:25565
+[20:03:36] [Server thread/INFO]: Using default channel type
+[20:03:38] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[20:03:39] [Server thread/INFO]: [SkinsRestorer] Loading SkinsRestorer v13.7.9
+[20:03:39] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v6.1.7;dd00bb1
+[20:03:39] [Server thread/INFO]: [Colored Signs] Loading ColoredSigns v3.0
+[20:03:39] [Server thread/INFO]: [Skript] Loading Skript v2.2-dev36
+[20:03:39] [Server thread/INFO]: [ClearLag] Loading ClearLag v3.1.6
+[20:03:39] [Server thread/INFO]: [CrackShot] Loading CrackShot v0.98.9
+[20:03:39] [Server thread/INFO]: [SkQuery] Loading SkQuery v3.6.1-Lime
+[20:03:39] [Server thread/INFO]: [skript-mirror] Loading skript-mirror v0.19.1
+[20:03:39] [Server thread/INFO]: [Vault] Loading Vault v1.7.2-b107
+[20:03:39] [Server thread/INFO]: [Multiverse-Core] Loading Multiverse-Core v1.1
+[20:03:39] [Server thread/INFO]: [ProtocolLib] Loading ProtocolLib v4.5.0
+[20:03:39] [Server thread/INFO]: [WorldGuard] Loading WorldGuard v6.2.1;84bc322
+[20:03:39] [Server thread/INFO]: [Skellett] Loading Skellett v1.9.6b
+[20:03:39] [Server thread/INFO]: [skRayFall] Loading skRayFall v1.9.14
+[20:03:39] [Server thread/INFO]: [Essentials] Loading Essentials v2.17.2.0
+[20:03:39] [Server thread/INFO]: [EssentialsChat] Loading EssentialsChat v2.17.2.0
+[20:03:39] [Server thread/INFO]: [EssentialsGeoIP] Loading EssentialsGeoIP v2.17.2.0
+[20:03:39] [Server thread/INFO]: [EssentialsAntiBuild] Loading EssentialsAntiBuild v2.17.2.0
+[20:03:39] [Server thread/INFO]: [TuSKe] Loading TuSKe v1.8.2
+[20:03:39] [Server thread/INFO]: [CommandSigns] Loading CommandSigns v1.9.3.3
+[20:03:39] [Server thread/INFO]: [EssentialsSpawn] Loading EssentialsSpawn v2.17.2.0
+[20:03:39] [Server thread/INFO]: [Vault] Enabling Vault v1.7.2-b107
+[20:03:39] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[20:03:39] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[20:03:39] [Server thread/INFO]: [Vault] Enabled Version 1.7.2-b107
+[20:03:39] [Server thread/INFO]: [ProtocolLib] Enabling ProtocolLib v4.5.0
+[20:03:39] [Server thread/INFO]: [ProtocolLib] Started structure compiler thread.
+[20:03:39] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[20:03:39] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[20:03:39] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[20:03:39] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[20:03:39] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[20:03:39] [Server thread/INFO]: Preparing level "world"
+[20:03:39] [Server thread/INFO]: -------- World Settings For [world] --------
+[20:03:39] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:03:39] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:03:39] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:03:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:03:39] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:03:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617 Monument: 10387313 Slime: 987234911
+[20:03:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:03:39] [Server thread/INFO]: View Distance: 10
+[20:03:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:03:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:03:39] [Server thread/INFO]: Random Lighting Updates: false
+[20:03:39] [Server thread/INFO]: Max TNT Explosions: 100
+[20:03:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Vine Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[20:03:40] [Server thread/INFO]: Structure Info Saving: true
+[20:03:40] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:03:40] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[20:03:40] [Server thread/INFO]: Mob Spawn Range: 4
+[20:03:40] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:03:41] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[20:03:41] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:03:41] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:03:41] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:03:41] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:03:41] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:03:41] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617 Monument: 10387313 Slime: 987234911
+[20:03:41] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:03:41] [Server thread/INFO]: View Distance: 10
+[20:03:41] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:03:41] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:03:41] [Server thread/INFO]: Random Lighting Updates: false
+[20:03:41] [Server thread/INFO]: Max TNT Explosions: 100
+[20:03:41] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Vine Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Structure Info Saving: true
+[20:03:41] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:03:41] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[20:03:41] [Server thread/INFO]: Mob Spawn Range: 4
+[20:03:41] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:03:41] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[20:03:41] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:03:41] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:03:41] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:03:41] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:03:41] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:03:41] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617 Monument: 10387313 Slime: 987234911
+[20:03:41] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:03:41] [Server thread/INFO]: View Distance: 10
+[20:03:41] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:03:41] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:03:41] [Server thread/INFO]: Random Lighting Updates: false
+[20:03:41] [Server thread/INFO]: Max TNT Explosions: 100
+[20:03:41] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Vine Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[20:03:41] [Server thread/INFO]: Structure Info Saving: true
+[20:03:41] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:03:41] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[20:03:41] [Server thread/INFO]: Mob Spawn Range: 4
+[20:03:41] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:03:41] [Server thread/INFO]: Preparing start region for level 0 (Seed: 7194312283618246253)
+[20:03:42] [Server thread/INFO]: Preparing spawn area: 6%
+[20:03:43] [Server thread/INFO]: Preparing spawn area: 66%
+[20:03:43] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7194312283618246253)
+[20:03:44] [Server thread/INFO]: Preparing spawn area: 85%
+[20:03:45] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7194312283618246253)
+[20:03:45] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v13.7.9
+[20:03:45] [Server thread/INFO]: [SkinsRestorer] Using SpigotSkinRefresher
+[20:03:45] [Server thread/INFO]: [SkinsRestorer] Detected Minecraft v1_12_R1, using UniversalSkinFactory.
+[20:03:45] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v6.1.7;dd00bb1
+[20:03:46] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[20:03:46] [Server thread/INFO]: [WorldEdit] Using com.sk89q.worldedit.bukkit.adapter.impl.Spigot_v1_12_R1 as the Bukkit adapter
+[20:03:46] [Server thread/INFO]: [Colored Signs] Enabling ColoredSigns v3.0
+[20:03:46] [Server thread/INFO]: [Skript] Enabling Skript v2.2-dev36
+[20:03:47] [Server thread/INFO]: [Skript] Starting updater thread
+[20:03:50] [Server thread/INFO]: [Skript] Loaded a total of 79112 english aliases
+[20:03:50] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
+[20:03:50] [Server thread/INFO]: [ClearLag] Enabling ClearLag v3.1.6
+[20:03:50] [Server thread/INFO]: [ClearLag] Loading modules...
+[20:03:50] [Server thread/INFO]: [ClearLag] Modules enabed, loading config values
+[20:03:50] [Server thread/INFO]: [ClearLag] Modules have been loaded!
+[20:03:50] [Server thread/INFO]: [ClearLag] Clearlag is now enabled!
+[20:03:50] [Server thread/INFO]: [CrackShot] Enabling CrackShot v0.98.9
+[20:03:50] [Thread-8/INFO]: [ClearLag] Checking for updates compatible with your bukkit version [1.12]...
+[20:03:50] [Server thread/INFO]: [CrackShot] Gun-mode activated. Boop!
+[20:03:50] [Server thread/INFO]: [SkQuery] Enabling SkQuery v3.6.1-Lime
+[20:03:51] [Server thread/INFO]: [skQuery] Locating classes from SkQuery...
+[20:03:51] [Server thread/INFO]: [skQuery] Beginning to process a total of 146 from SkQuery
+[20:03:51] [Server thread/INFO]: [skQuery] com.w00tmast3r.skquery.elements.conditions.CondFileExistance is patternless and failed to register. This is most likely a code error.
+[20:03:51] [Server thread/INFO]: [skQuery] Out of 146 classes, 142 classes were loaded from SkQuery
+[20:03:51] [Server thread/INFO]: [skript-mirror] Enabling skript-mirror v0.19.1
+[20:03:52] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v1.1
+[20:03:52] [Server thread/INFO]: -------- World Settings For [Dayz] --------
+[20:03:52] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:03:52] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:03:52] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:03:52] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:03:52] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:03:52] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617 Monument: 10387313 Slime: 987234911
+[20:03:52] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:03:52] [Server thread/INFO]: View Distance: 10
+[20:03:52] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:03:52] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:03:52] [Server thread/INFO]: Random Lighting Updates: false
+[20:03:52] [Server thread/INFO]: Max TNT Explosions: 100
+[20:03:52] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Vine Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[20:03:52] [Server thread/INFO]: Structure Info Saving: true
+[20:03:52] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:03:52] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[20:03:52] [Server thread/INFO]: Mob Spawn Range: 4
+[20:03:52] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:03:53] [Server thread/INFO]: Preparing start region for level 3 (Seed: 27594263)
+[20:03:53] [Thread-8/INFO]: [ClearLag] No updates found!
+[20:03:54] [Server thread/INFO]: Preparing spawn area for Dayz, 28%
+[20:03:55] [Server thread/INFO]: Preparing spawn area for Dayz, 81%
+[20:03:55] [Server thread/INFO]: [Multiverse-Core] 4 - World(s) loaded.
+[20:03:55] [Server thread/INFO]: false
+[20:03:55] [Server thread/INFO]: [Multiverse-Core] Version 1.1 (API v20) Enabled - By Rigby, fernferret, lithium3141 and main--
+[20:03:55] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v6.2.1;84bc322
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world) Lava fire is blocked.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is blocked.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is blocked.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[20:03:56] [Server thread/INFO]: [WorldGuard] (Dayz) TNT ignition is PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (Dayz) Lighters are PERMITTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (Dayz) Lava fire is blocked.
+[20:03:56] [Server thread/INFO]: [WorldGuard] (Dayz) Fire spread is UNRESTRICTED.
+[20:03:56] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'Dayz'
+[20:03:56] [Server thread/INFO]: [WorldGuard] Loading region data...
+[20:03:56] [Server thread/INFO]: [Skellett] Enabling Skellett v1.9.6b
+[20:04:01] [Server thread/INFO]: [Skellett] Registered 60 Effects, 24 Conditions, 179 Expressions and 28 Events
+[20:04:01] [Server thread/INFO]: [Skellett] Failed to check for an update on spigot
+[20:04:01] [Server thread/INFO]: [Skellett] Has been enabled!
+[20:04:01] [Server thread/INFO]: [skRayFall] Enabling skRayFall v1.9.14
+[20:04:01] [Server thread/INFO]: [skRayFall] Yay! You are running skRayFall 1.9.14!
+[20:04:01] [Server thread/INFO]: [skRayFall] Nathan and Lewis <3 you.
+[20:04:01] [Server thread/INFO]: [skRayFall] Cooking Bacon...
+[20:04:02] [Server thread/INFO]: [skRayFall] Citizens not found! Sorry you cant make friends, but don't worry we will still be your friend <3
+[20:04:02] [Server thread/INFO]: [skRayFall] Got bacon for the EffectLib particle ninjas!
+[20:04:02] [Server thread/INFO]: [skRayFall] No Votifier Found! *Checks oven for finished bacon*
+[20:04:02] [Server thread/INFO]: [skRayFall] Giving CrackShot snipers bacon.
+[20:04:02] [Server thread/INFO]: [skRayFall] Enabling general 1.8+ bacon!
+[20:04:02] [Server thread/INFO]: [skRayFall] Getting the general 1.9+ bacon!
+[20:04:02] [Server thread/INFO]: [skRayFall] Getting the extra special 1.12 bacon!
+[20:04:04] [Server thread/INFO]: [skRayFall] An update for skRayFall is available!
+[20:04:04] [Server thread/INFO]: [skRayFall] Bacon is ready!
+[20:04:04] [Server thread/INFO]: [Essentials] Enabling Essentials v2.17.2.0
+[20:04:04] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[20:04:04] [Server thread/INFO]: Attempting to convert old kits in config.yml to new kits.yml
+[20:04:04] [Server thread/INFO]: No kits found to migrate.
+[20:04:05] [Server thread/INFO]: [Essentials] Using legacy item data provider as mob spawner provider.
+[20:04:06] [Server thread/INFO]: [Essentials] Using Reflection based provider as spawn egg provider.
+[20:04:06] [Server thread/INFO]: [Essentials] Using 1.9+ BasePotionData provider as potion meta provider.
+[20:04:06] [Server thread/INFO]: Loaded 852 items from items.csv.
+[20:04:06] [Server thread/INFO]: Using locale en_US
+[20:04:06] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[20:04:06] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[20:04:06] [Server thread/INFO]: [Vault] [Vault][Economy] Essentials Economy hooked.
+[20:04:06] [Server thread/INFO]: [Essentials] Using superperms-based permissions.
+[20:04:06] [Server thread/INFO]: [EssentialsChat] Enabling EssentialsChat v2.17.2.0
+[20:04:06] [Server thread/INFO]: [EssentialsGeoIP] Enabling EssentialsGeoIP v2.17.2.0
+[20:04:08] [Server thread/INFO]: [EssentialsGeoIP] This product includes GeoLite2 data created by MaxMind, available from http://www.maxmind.com/.
+[20:04:08] [Server thread/INFO]: [EssentialsAntiBuild] Enabling EssentialsAntiBuild v2.17.2.0
+[20:04:08] [Server thread/INFO]: [TuSKe] Enabling TuSKe v1.8.2
+[20:04:08] [Server thread/INFO]: [TuSKe] Enabling Metrics... Done!
+[20:04:08] [Server thread/INFO]: [TuSKe] Check for updates enabled. It will check in some seconds.
+[20:04:08] [Server thread/INFO]: [TuSKe] Documentation enabled. Some files containing all syntax of all addons will be generated.
+[20:04:08] [Server thread/INFO]: [TuSKe]  
+[20:04:08] [Server thread/INFO]: [TuSKe]  A special thanks for donators:
+[20:04:08] [Server thread/INFO]: [TuSKe]  @X0Freak - 50$
+[20:04:08] [Server thread/INFO]: [TuSKe]  @RepublicanSensei - 10$
+[20:04:08] [Server thread/INFO]: [TuSKe]  
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! [Skript] Severe Error:
+[20:04:08] [Server thread/ERROR]: #!#! TuSKe's class com.github.tukenuke.tuske.effects.EffMakeDrop generated an exception while loading
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Something went horribly wrong with Skript.
+[20:04:08] [Server thread/ERROR]: #!#! This issue is NOT your fault! You probably can't fix it yourself, either.
+[20:04:08] [Server thread/ERROR]: #!#! It looks like you are using some plugin(s) that alter how Skript works (addons).
+[20:04:08] [Server thread/ERROR]: #!#! Following plugins are probably related to this error in some way:
+[20:04:08] [Server thread/ERROR]: #!#! TuSKe (github.com/Tuke-Nuke/TuSKe) 
+[20:04:08] [Server thread/ERROR]: #!#! You should try disabling those plugins one by one, trying to find which one causes it.
+[20:04:08] [Server thread/ERROR]: #!#! If the error doesn't disappear even after disabling all listed plugins, it is probably Skript issue.
+[20:04:08] [Server thread/ERROR]: #!#! In that case, you will be given instruction on how should you report it.
+[20:04:08] [Server thread/ERROR]: #!#! On the other hand, if the error disappears when disabling some plugin, report it to author of that plugin.
+[20:04:08] [Server thread/ERROR]: #!#! Only if the author tells you to do so, report it as Skript issue (url below)
+[20:04:08] [Server thread/ERROR]: #!#! Issue tracker: https://github.com/SkriptLang/Skript/issues (only if you know what you're doing!)
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Stack trace:
+[20:04:08] [Server thread/ERROR]: #!#! java.lang.NullPointerException
+[20:04:08] [Server thread/ERROR]: #!#!     at com.github.tukenuke.tuske.effects.EffMakeDrop.<clinit>(EffMakeDrop.java:25)
+[20:04:08] [Server thread/ERROR]: #!#!     at java.lang.Class.forName0(Native Method)
+[20:04:08] [Server thread/ERROR]: #!#!     at java.lang.Class.forName(Unknown Source)
+[20:04:08] [Server thread/ERROR]: #!#!     at ch.njol.skript.SkriptAddon.loadClasses(SkriptAddon.java:108)
+[20:04:08] [Server thread/ERROR]: #!#!     at com.github.tukenuke.tuske.TuSKe.onEnable(TuSKe.java:100)
+[20:04:08] [Server thread/ERROR]: #!#!     at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:264)
+[20:04:08] [Server thread/ERROR]: #!#!     at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:337)
+[20:04:08] [Server thread/ERROR]: #!#!     at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:402)
+[20:04:08] [Server thread/ERROR]: #!#!     at org.bukkit.craftbukkit.v1_12_R1.CraftServer.enablePlugin(CraftServer.java:374)
+[20:04:08] [Server thread/ERROR]: #!#!     at org.bukkit.craftbukkit.v1_12_R1.CraftServer.enablePlugins(CraftServer.java:323)
+[20:04:08] [Server thread/ERROR]: #!#!     at net.minecraft.server.v1_12_R1.MinecraftServer.t(MinecraftServer.java:421)
+[20:04:08] [Server thread/ERROR]: #!#!     at net.minecraft.server.v1_12_R1.MinecraftServer.l(MinecraftServer.java:382)
+[20:04:08] [Server thread/ERROR]: #!#!     at net.minecraft.server.v1_12_R1.MinecraftServer.a(MinecraftServer.java:337)
+[20:04:08] [Server thread/ERROR]: #!#!     at net.minecraft.server.v1_12_R1.DedicatedServer.init(DedicatedServer.java:272)
+[20:04:08] [Server thread/ERROR]: #!#!     at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:544)
+[20:04:08] [Server thread/ERROR]: #!#!     at java.lang.Thread.run(Unknown Source)
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Version Information:
+[20:04:08] [Server thread/ERROR]: #!#!   Skript: 2.2-dev36
+[20:04:08] [Server thread/ERROR]: #!#!   Bukkit: 1.12-R0.1-SNAPSHOT
+[20:04:08] [Server thread/ERROR]: #!#!   Minecraft: 1.12
+[20:04:08] [Server thread/ERROR]: #!#!   Java: 1.8.0_251 (Java HotSpot(TM) 64-Bit Server VM 25.251-b08)
+[20:04:08] [Server thread/ERROR]: #!#!   OS: Windows 8.1 amd64 6.3
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Server platform: Spigot
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Current node: null
+[20:04:08] [Server thread/ERROR]: #!#! Current item: null
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Thread: Server thread
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! Language: english
+[20:04:08] [Server thread/ERROR]: #!#! Link parse mode: DISABLED
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:08] [Server thread/ERROR]: #!#! End of Error.
+[20:04:08] [Server thread/ERROR]: #!#! 
+[20:04:09] [Server thread/INFO]: [TuSKe] Loaded 8 events, 12 conditions, 20 effects, 61 expressions and 0 types. Have fun!
+[20:04:09] [Server thread/INFO]: [CommandSigns] Enabling CommandSigns v1.9.3.3
+[20:04:09] [Server thread/INFO]: [CommandSigns] No signs found.
+[20:04:09] [Server thread/INFO]: [EssentialsSpawn] Enabling EssentialsSpawn v2.17.2.0
+[20:04:09] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:04:09] [Server thread/INFO]: Done (29.363s)! For help, type "help" or "?"
+[20:04:09] [Server thread/INFO]: [Skript] Loading variables...
+[20:04:09] [Server thread/INFO]: [Skript] Loaded 0 variables in 0.0 seconds
+[20:04:09] [Server thread/INFO]: [Skript] All scripts loaded without errors.
+[20:04:09] [Server thread/WARN]: [Skript] No scripts were found, maybe you should write some ;) (config.sk, line 195: databases:')
+[20:04:09] [Server thread/INFO]: [Skript] Finished loading.
+[20:04:09] [Craft Scheduler Thread - 3/INFO]: [Vault] Checking for Updates ... 
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer]     +===============+
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer]     | SkinsRestorer |
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer]     +===============+
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer]     Current version: 13.7.9
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer]     This is the latest version!
+[20:04:10] [Craft Scheduler Thread - 0/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:04:10] [Craft Scheduler Thread - 3/INFO]: [Vault] No new version available
+[20:04:10] [Craft Scheduler Thread - 2/INFO]: [Skript] You're currently running custom Skript version. No updates will be automatically installed.
+[20:04:10] [Craft Scheduler Thread - 3/INFO]: [TuSKe] Checking for latest update...
+[20:04:11] [Craft Scheduler Thread - 3/INFO]: [TuSKe] No new update was found!
+[20:04:11] [Server thread/INFO]: [ProtocolLib] The updater found an update, and has readied it to be loaded the next time the server restarts/reloads.
+[20:04:14] [Craft Scheduler Thread - 3/INFO]: [TuSKe] Generating documentation of Skript & Addons.
+[20:04:14] [Craft Scheduler Thread - 3/INFO]: [TuSKe] Documentation was generated successfully.
+[20:04:18] [User Authenticator #1/INFO]: UUID of player MeeOp is 2aff6269-309b-3950-a604-e01d221d554a
+[20:04:20] [Server thread/INFO]: MeeOp[/192.168.1.33:49555] logged in with entity id 424 at ([Dayz]7026.976637078669, 112.0, 11748.692823974881)
+[20:04:37] [Server thread/INFO]: MeeOp issued server command: /gm 1
+[20:05:48] [Server thread/INFO]: MeeOp issued server command: /shot lit
+[20:06:19] [Server thread/INFO]: MeeOp issued server command: /shot list

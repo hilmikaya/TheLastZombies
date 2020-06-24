@@ -1,0 +1,21 @@
+lastAccountName: MeeOp
+timestamps:
+  login: 1593018260441
+  lastteleport: 1592312434094
+  logout: 1592411913005
+ipAddress: 192.168.1.33
+lastlocation:
+  world: Dayz
+  x: 193.688700912061
+  y: 75.0
+  z: 254.52690458452201
+  yaw: 126.68584
+  pitch: 43.661015
+afk: true
+logoutlocation:
+  world: Dayz
+  x: 7026.976637078669
+  y: 112.0
+  z: 11748.692823974881
+  yaw: 283.95636
+  pitch: 33.048622

@@ -1,0 +1,2277 @@
+Conditions:
+	CondBarHasFlag:
+		ID: CondBarHasFlag
+		Patterns:
+			[skellett] [boss[ ]][bar] %bossbar% (1¦(ha(s|ve)|contain[s])|2¦(do[es](n't| not) have| do[es](n't| not) contain)) [(the|a)] [boss[ ]][bar] [flag] %barflag%
+	CondCanBreed:
+		ID: CondCanBreed
+		Patterns:
+			[entity] %entity% (1¦can|2¦can([ ]no|')t) [be] breed
+	CondCanSeePlayer:
+		ID: CondCanSeePlayer
+		Patterns:
+			[player] %player% (1¦can|2¦can([ ]no|')t) see [player] %player%
+	CondClientTimeRelative:
+		ID: CondClientTimeRelative
+		Patterns:
+			[client] relative time of %player% (1¦is|2¦is(n't| not)) relative [to server]
+	CondEventCancelled:
+		ID: CondEventCancelled
+		Patterns:
+			[(the|this)] event (1¦is|2¦is(n't| not)) cancelled
+	CondFileExists:
+		ID: CondFileExists
+		Patterns:
+			[file] exist(s|ance) [(at|of)] %string% [is %-boolean%]
+	CondHasAuthor:
+		ID: CondHasAuthor
+		Patterns:
+			book %itemstack% (1¦(ha(s[n[']t]|ve)|contain[s])|2¦(do[es](n't| not) have| do[es](n't| not) contain)) [had] [an] [book [meta]] author
+	CondHasCooldown:
+		ID: CondHasCooldown
+		Patterns:
+			%player% (1¦(has|does)|2¦(has|does)(n't| not)) [(have|got)] [a] cool[ ]down for [(item|material)] %string%
+	CondHasGeneration:
+		ID: CondHasGeneration
+		Patterns:
+			book %itemstack% (1¦(ha(s[n[']t]|ve)|contain[s])|2¦(do[es](n't| not) have| do[es](n't| not) contain)) [had] [a] [book [meta]] generation
+	CondHasTitle:
+		ID: CondHasTitle
+		Patterns:
+			book %itemstack% (1¦(ha(s[n[']t]|ve)|contain[s])|2¦(do[es](n't| not) have| do[es](n't| not) contain)) [had] [a] [book [meta]] title
+	CondIsAdult:
+		ID: CondIsAdult
+		Patterns:
+			[entity] %entity% (1¦is|2¦is(n't| not)) [a[n]] adult
+	CondIsInWater:
+		ID: CondIsInWater
+		Patterns:
+			[entity] %entity% (1¦is|2¦is(n't| not)) in water
+	CondIsOfRow:
+		ID: CondIsOfRow
+		Patterns:
+			[slot] %number% (1¦is|2¦is(n't| not)) (within|of|in) row %number% [(of|in|from) [inventory] %-inventory%]
+	CondIsPowered:
+		ID: CondIsPowered
+		Patterns:
+			[block] %block% (1¦(is|has)|2¦(is|has)(n't| not)) [got] [redstone] powered
+	CondIsSticky:
+		ID: CondIsSticky
+		Patterns:
+			[piston] %block% (1¦is|2¦is(n't| not)) [a] sticky [piston]
+	CondIsUnbreakable:
+		ID: CondIsUnbreakable
+		Patterns:
+			%itemstack% (1¦is|2¦is(n't| not)) unbreakable
+	CondIsWhitelisted:
+		ID: CondIsWhitelisted
+		Patterns:
+			[server] (1¦is|2¦is(n't| not)) whitelisted
+	CondJukeboxIsPlaying:
+		ID: CondJukeboxIsPlaying
+		Patterns:
+			juke[ ]box %block% (1¦is|2¦is(n't| not)) playing [a] (record|track|song)
+	CondLineOfSight:
+		ID: CondLineOfSight
+		Patterns:
+			%entity% (1¦can|2¦can([ ]no|')t) [visibly] see %entity%
+	CondMapBeingHandled:
+		ID: CondMapBeingHandled
+		Patterns:
+			[map] %map% (1¦is|2¦is(n't| not)) being handled [by skellett]
+	CondObjectiveExists:
+		ID: CondObjectiveExists
+		Patterns:
+			objective %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]] (1¦(is set|[does] exist[s])|2¦(is(n't| not) set|does(n't| not) exist[s]))
+	CondObjectiveIsModifiable:
+		ID: CondObjectiveIsModifiable
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective %objective% (1¦is modifiable|2¦is(n't| not) modifiable)
+	CondPlayerViewingCredits:
+		ID: CondPlayerViewingCredits
+		Patterns:
+			[player] %player% (1¦is|2¦is(n't| not)) viewing [the] credits
+	CondRegeneratorExists:
+		ID: CondRegeneratorExists
+		Patterns:
+			[skellett] regenerator with id %string% (1¦does|2¦does(n't| not)) exist
+	CondScoreboardExists:
+		ID: CondScoreboardExists
+		Patterns:
+			score[ ][board] %string% (1¦(is set|[does] exist[s])|2¦(is(n't| not) set|does(n't| not) exist[s]))
+	CondStylishExists:
+		ID: CondStylishExists
+		Patterns:
+			(stylish|style|simple) [score][ ]board %string% (1¦(is set|[does] exist[s])|2¦(is(n't| not) set|does(n't| not) exist[s]))
+	CondTeamHasEntry:
+		ID: CondTeamHasEntry
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) (1¦(ha(s|ve)|contain[s])|2¦(do[es](n't| not) have| do[es](n't| not) contain)) [the] [entry] %string% [(in|within)] the [team] %team%
+	CondVirtualMap:
+		ID: CondVirtualMap
+		Patterns:
+			[map] %map% (1¦is|2¦is(n't| not)) virtual
+Effects:
+	EffActionbar:
+		ID: EffActionbar
+		Patterns:
+			(send|show) [a[n]] action[ ]bar [(with|from)] [string] %string% to %players%
+	EffAddClickEvent:
+		ID: EffAddClickEvent
+		Patterns:
+			add click event with action %clickeventaction% (and|with|to) [(execute|text|link)] %string% to [text component] %textcomponent%
+	EffAddComponentToPage:
+		ID: EffAddComponentToPage
+		Patterns:
+			add text component[s] %textcomponents% to [book] %itemstack%
+	EffAddHoverEvent:
+		ID: EffAddHoverEvent
+		Patterns:
+			add hover event with action %hovereventaction% (and|with) [(value|text)] %string% to [text component] %textcomponent%
+	EffAddPage:
+		ID: EffAddPage
+		Patterns:
+			add [a] page [with] [(text|data)] [%-string%] to [book] %itemstack%
+	EffApplyBetterPotion:
+		ID: EffApplyBetterPotion
+		Patterns:
+			[skellett] apply [potion[s]] [of] %potioneffecttype% [potion] [[[of] tier] %-number%] to %livingentities% [for %-timespan%] [[and] ambient %-boolean% [hide [particle [effects] %-boolean% [colo[u]r %-color%]]]]
+	EffBabyAdult:
+		ID: EffBabyAdult
+		Patterns:
+			[(make|set)] [entity] %entity% [to] [a[n]] (1¦baby|2¦adult)
+	EffBarAddFlag:
+		ID: EffBarAddFlag
+		Patterns:
+			[skellett] add [boss[ ]][bar] [flag] %barflag% to [the] [boss[ ]][bar] %bossbar%
+	EffBarAddPlayer:
+		ID: EffBarAddPlayer
+		Patterns:
+			[skellett] add %player% to [the] [boss[ ]]bar %bossbar%
+	EffBarHideAndShow:
+		ID: EffBarHideAndShow
+		Patterns:
+			[skellett] (1¦hide|2¦show) [boss[ ]]bar %bossbar%
+	EffBarRemoveAllPlayers:
+		ID: EffBarRemoveAllPlayers
+		Patterns:
+			[skellett] remove [(the|all)] [of] [the] player[[']s] [(in|of|from)] [the] [boss[ ]]bar %bossbar%
+	EffBarRemoveFlag:
+		ID: EffBarRemoveFlag
+		Patterns:
+			[skellett] remove [boss[ ]][bar] [flag] %barflag% from [the] [boss[ ]][bar] %bossbar%
+	EffBarRemovePlayer:
+		ID: EffBarRemovePlayer
+		Patterns:
+			[skellett] remove %player% from [the] [boss[ ]]bar %bossbar%
+	EffBlockConstructor:
+		ID: EffBlockConstructor
+		Patterns:
+			(create|start|make|build|construct) %string% with %itemtype% at %location% [[with effect[s]] %-boolean%]
+	EffBreakBlockNaturally:
+		ID: EffBreakBlockNaturally
+		Patterns:
+			[skellett] break %block% [naturally] [(with|using) %-itemstack%]
+			[skellett] [naturally] break %block% [(with|using) %-itemstack%]
+	EffChunkLoad:
+		ID: EffChunkLoad
+		Patterns:
+			[skellett] load chunk %chunk% [[with] generat(e|ing) %-boolean%]
+	EffChunkUnload:
+		ID: EffChunkUnload
+		Patterns:
+			[skellett] unload chunk %chunk% [[with] sav(e|ing) %-boolean%]
+	EffClearSlot:
+		ID: EffClearSlot
+		Patterns:
+			(clear|empty|reset) (inventory|menu|gui) [slot %-integer%] [(of|in)] %inventory%
+	EffClientChest:
+		ID: EffClientChest
+		Patterns:
+			[skellett] (1¦open|2¦close) [the] %block% for %players%
+			[skellett] make [the] %block% (appear|look) (1¦open|2¦closed) for %players%
+			[skellett] play chest (1¦open|2¦close) animation at %block% for %players%
+	EffCopyFile:
+		ID: EffCopyFile
+		Patterns:
+			[skellett] copy file [path] %string% to [path] %string%
+	EffCreateBlockRegenerator:
+		ID: EffCreateBlockRegenerator
+		Patterns:
+			(create|make) [a] [new] [skellett] regenerator with ID %string% with %blocks%
+	EffCreateRegenerator:
+		ID: EffCreateRegenerator
+		Patterns:
+			(create|make) [a] [new] [skellett] regenerator with ID %string% (from|within) [location[s]] %location% (to|and) %location%
+	EffCustomEffect:
+		ID: EffCustomEffect
+		Patterns:
+			(invoke|execute|run) method %string% [(from|of) [(expression|type|class)] %*-object%] [with parameter[s] %-objects%]
+	EffDeleteRegenerator:
+		ID: EffDeleteRegenerator
+		Patterns:
+			(delete|remove) [the] [skellett] regenerator with ID %string% [re[ ]build %-boolean%]
+	EffDeleteScoreboard:
+		ID: EffDeleteScoreboard
+		Patterns:
+			(delete|clear|remove) (score[ ][board]|[skellett[ ]]board)) [(with|named)] [(name|id)] %string%
+	EffDownload:
+		ID: EffDownload
+		Patterns:
+			[skellett] d[ownload][l] [from] [url] %string% to %string%
+	EffEntityEffect:
+		ID: EffEntityEffect
+		Patterns:
+			[skellett] (make|force) %entity% [to] [(perform|do)] [entity] effect %entityeffect%
+	EffFilesCreate:
+		ID: EffFilesCreate
+		Patterns:
+			[skellett] c[reate][ ][f][ile] %string%
+	EffFilesDelete:
+		ID: EffFilesDelete
+		Patterns:
+			d[elete[ ]]f[ile] %string%
+	EffFirework:
+		ID: EffFirework
+		Patterns:
+			[skellett] (launch|deploy) [%-strings%] firework[s] at %locations% [with] (duration|timed|time) %number% [colo[u]r[ed] (%-strings%|%-color%)]
+	EffForceRespawn:
+		ID: EffForceRespawn
+		Patterns:
+			[skellett] [force] respawn [of] %player%
+			[skellett] force [the] %player% to respawn
+	EffHidePlayer:
+		ID: EffHidePlayer
+		Patterns:
+			[skellett] hide [player] %player% from %player%
+	EffJukeboxEject:
+		ID: EffJukeboxEject
+		Patterns:
+			[(force|make)] [the] juke[ ]box %block% eject [[it[']s] (record|track|song)]
+	EffLeashBlock:
+		ID: EffLeashBlock
+		Patterns:
+			(leash|lead) %livingentities% to %block%
+	EffLoadCreateWorld:
+		ID: EffLoadCreateWorld
+		Patterns:
+			[skellett] (load|create) world %string% [with generator %-string%] [[and] [with] [fawe] async[hronous]]
+	EffManageMap:
+		ID: EffManageMap
+		Patterns:
+			(manage|override|overwrite|create) [skellett] map %map% [[and] [with] override %-boolean%]
+	EffMapDrawCursor:
+		ID: EffMapDrawCursor
+		Patterns:
+			draw [map] cursor %string% pointing %number% at [coordinate[s]] [x] %number%(,| and) [y] %number% on [skellett] map %map%
+	EffMapDrawImage:
+		ID: EffMapDrawImage
+		Patterns:
+			draw [buffered] image %mapimage% [at [coordinate[s]] [x] %number%(,| and) [y] %number%] on [skellett] map %map%
+	EffMapDrawText:
+		ID: EffMapDrawText
+		Patterns:
+			draw text %string% at [coordinate[s]] [x] %number%(,| and) [y] %number% on [skellett] map %map%
+	EffMessageCenter:
+		ID: EffMessageCenter
+		Patterns:
+			(message|send [message]) center[ed] %strings% to %players% [[with[ text]] %-string%]
+	EffMessageTextComponent:
+		ID: EffMessageTextComponent
+		Patterns:
+			message text components %textcomponents% to %players%
+	EffMoveFile:
+		ID: EffMoveFile
+		Patterns:
+			[skellett] move file [path] %string% to [path] %string%
+	EffNMSTest:
+		ID: EffNMSTest
+		Patterns:
+			skellett nms of %object%
+	EffOpenBook:
+		ID: EffOpenBook
+		Patterns:
+			open book %itemstack% to %player%
+	EffOpenInventory:
+		ID: EffOpenInventory
+		Patterns:
+			[skellett] open [[better] inventory [type]] %string% [with %-number% row[s]] [named %-string%] to %players%
+	EffPlaySound:
+		ID: EffPlaySound
+		Patterns:
+			[skellett] play [(skellett|better)] [sound] (1¦%-sound%|2¦%-string%) at %locations% (with|at|and) volume %number% (and|with|at) pitch %number%
+	EffPlaySoundPlayer:
+		ID: EffPlaySoundPlayer
+		Patterns:
+			[skellett] play [(skellett|better)] [sound] (1¦%-sound%|2¦%-string%) (for|to) %players% (with|at|and) volume %number% (and|with|at) pitch %number%
+	EffPlayerTeleportWorldSpawn:
+		ID: EffPlayerTeleportWorldSpawn
+		Patterns:
+			teleport %players% to [world] spawn (of|in) [world] %string%
+			[skellett] teleport %players% to world %string% [spawn]
+	EffReconfigureRegenerator:
+		ID: EffReconfigureRegenerator
+		Patterns:
+			re[ ]configure [the] [skellett] regenerator with ID %string%
+	EffRegenerate:
+		ID: EffRegenerate
+		Patterns:
+			re(generate|[ ]build) [the] [skellett] regenerator with ID %string%
+	EffRegisterObjective:
+		ID: EffRegisterObjective
+		Patterns:
+			register [new] (score[ ][board]|[skellett[ ]]board) objective %string% with [criteria] %string% [[(in|from)] %-scoreboard%]
+			register [new] objective %string% with [criteria] %string% [(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]
+	EffRegisterTeam:
+		ID: EffRegisterTeam
+		Patterns:
+			register [a] [new] (score[ ][board]|[skellett[ ]]board) team %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	EffReloadWhitelist:
+		ID: EffReloadWhitelist
+		Patterns:
+			reload [the] white[ ]list
+	EffRemoveArrows:
+		ID: EffRemoveArrows
+		Patterns:
+			remove [(the|all)] [of] [the] arrows stuck in %player%
+	EffRemoveEffects:
+		ID: EffRemoveEffects
+		Patterns:
+			(clear|remove) [all] [potion] effects (from|of) %players%
+			milk %players%
+	EffResetEntryScores:
+		ID: EffResetEntryScores
+		Patterns:
+			reset [(the|all)] [of] [the] (score[ ][board]|[skellett[ ]]board) scores of [entry] %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+			reset [(the|all)] [of] [the] (score[ ][board]|[skellett[ ]]board) [entry] %string%'s scores [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+			(score[ ][board]|[skellett[ ]]board) reset [(the|all)] [of] [the] scores of [entry] %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	EffScoreboardClearSlot:
+		ID: EffScoreboardClearSlot
+		Patterns:
+			clear (score[ ][board]|board) [display] slot %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	EffSendMap:
+		ID: EffSendMap
+		Patterns:
+			(show|send|display) [skellett] [custom] map %map% to %players%
+	EffSerialze:
+		ID: EffSerialze
+		Patterns:
+			[skellett] serialize [variable] %object%
+	EffSetCollidable:
+		ID: EffSetCollidable
+		Patterns:
+			[set] collid(e|able) [state] [of] %entity% to %boolean%
+	EffSetInventoryProperty:
+		ID: EffSetInventoryProperty
+		Patterns:
+			(set|change) %player%['s] (window|[current] inventory) property [of] %inventoryproperty% to %number%
+	EffSetWhitelist:
+		ID: EffSetWhitelist
+		Patterns:
+			[set] white[ ]list [to] %boolean%
+	EffShowPlayer:
+		ID: EffShowPlayer
+		Patterns:
+			[skellett] (show|reveal) [player] %player% to %players%
+	EffSpawnerForce:
+		ID: EffSpawnerForce
+		Patterns:
+			(make|force) spawner [at] %block% to spawn [[a[n]] entit(y|ies)]
+	EffStylishCreate:
+		ID: EffStylishCreate
+		Patterns:
+			[skellett] create [a] [new] (stylish|style|simple) [score][ ]board [with] [name[d]] %string%
+	EffStylishDelete:
+		ID: EffStylishDelete
+		Patterns:
+			[skellett] (delete|remove) [the] (stylish|style|simple) [score][ ][board] [with] [name[d]] %string%
+	EffStylishSlotCreate:
+		ID: EffStylishSlotCreate
+		Patterns:
+			[skellett] create [a[n]] [new] id [based] [score] [(with [id]|named)] %string% [(with|and)] [(text|string)] %string% [(in|with|for|and)] slot %number% (in|for|of) (stylish|style|simple) [score][ ]board [with] [name[d]] %string%
+	EffStylishSlotDelete:
+		ID: EffStylishSlotDelete
+		Patterns:
+			[skellett] (delete|remove) [the] id [based] [score] [(with [id]|named)] %string% (in|from|for|of) (stylish|style|simple) [score][ ]board [with] [name[d]] %string%
+	EffTeamAddEntry:
+		ID: EffTeamAddEntry
+		Patterns:
+			(score[ ][board]|[skellett[ ]]board) add [the] entry [(from|of)] %string% to [the] [team] %team%
+	EffTeamRemoveEntry:
+		ID: EffTeamRemoveEntry
+		Patterns:
+			[(score[ ][board]|[skellett[ ]]board)] remove [the] entry [(from|of)] %string% from [the] [team] %team%
+	EffTitle:
+		ID: EffTitle
+		Patterns:
+			(send|show) [a] title [from] %string% [(with|and) [subtitle] %-string%] (to|for) %players% for %timespan%(,| and| with) %timespan% [fade[ ]in](,| and| with) %timespan% [fade[ ]out]
+			(send|show) %players% [a] title [(with|from)] %string% [(with|and) [subtitle] %-string%] for %timespan%(,| and| with) %timespan% [fade[ ]in](,| and| with) %timespan% [fade[ ]out]
+	EffUnZip:
+		ID: EffUnZip
+		Patterns:
+			[skellett] unzip %string% to %string%
+	EffUnregisterMap:
+		ID: EffUnregisterMap
+		Patterns:
+			(erase|clear|remove|delete|unregister) [skellett] map %map%
+	EffUnregisterObjective:
+		ID: EffUnregisterObjective
+		Patterns:
+			unregister (score[ ][board]|[skellett[ ]]board) objective %objective%
+	EffUnregisterTeam:
+		ID: EffUnregisterTeam
+		Patterns:
+			unregister [the] (score[ ][board]|[skellett[ ]]board) team %team%
+	EffUpdateInventory:
+		ID: EffUpdateInventory
+		Patterns:
+			update [the] (inventory|menu|gui) %inventory%
+Expressions:
+	ExprAbsoluteValue:
+		ID: ExprAbsoluteValue
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			absolute [value] of %number%
+	ExprAbsorptionHearts:
+		ID: ExprAbsorptionHearts
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[skellett] absorption hearts of %player%
+			[skellett] %player%'s absorption hearts
+	ExprActivePotionEffects:
+		ID: ExprActivePotionEffects
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [active] potion[s] [effects] (on|of) %entity%
+	ExprAge:
+		ID: ExprAge
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] age of [entity] %entity%
+			[entity] %entity%'s age
+	ExprAgeLock:
+		ID: ExprAgeLock
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] age lock of [entity] %entity%
+			[entity] %entity%'s age lock
+	ExprAmountOfDroppedItem:
+		ID: ExprAmountOfDroppedItem
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[skellett] [get] (size|number|amount) of dropped %entity%
+	ExprAmountOfItem:
+		ID: ExprAmountOfItem
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[skellett] (size|number|amount) of item[[ ]stack] %itemstack%
+	ExprAmountOfVariables:
+		ID: ExprAmountOfVariables
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			(size|amount) of [all] variables
+	ExprAnvilPrepareInventory:
+		ID: ExprAnvilPrepareInventory
+		Return type: anvilinventory
+		Changers:
+			none
+		Patterns:
+			[the] [skellett] [event] anvil[[']s] inv[entory]
+			event-anvilinventory
+	ExprAnvilPrepareInventoryCost:
+		ID: ExprAnvilPrepareInventoryCost
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[the] [skellett] [anvil[s]] repair cost (of|from|in) [anvil] [inventory] %anvilinventory%
+			[skellett] [anvil] [inventory] %anvilinventory%'s [anvil] repair cost
+	ExprArmorStandItemBoots:
+		ID: ExprArmorStandItemBoots
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			armo[u]r stand boots of %entity%
+			armo[u]r stand %entity%'s boots
+	ExprArmorStandItemChestplate:
+		ID: ExprArmorStandItemChestplate
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			armo[u]r stand chest[ ][plate] of %entity%
+			armo[u]r stand %entity%'s chest[ ][plate]
+	ExprArmorStandItemHelmet:
+		ID: ExprArmorStandItemHelmet
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			armo[u]r stand (helmet|hat) of %entity%
+			armo[u]r stand %entity%'s (helmet|hat)
+	ExprArmorStandItemLeggings:
+		ID: ExprArmorStandItemLeggings
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			armo[u]r stand leg[ging][s] of %entity%
+			armo[u]r stand %entity%'s leg[ging][s]
+	ExprBarColour:
+		ID: ExprBarColour
+		Return type: barcolour
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] colo[u]r of [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s [[boss][ ]bar] colo[u]r
+	ExprBarFlags:
+		ID: ExprBarFlags
+		Return type: barflag
+		Changers:
+			none
+		Patterns:
+			[skellett] [(the|all)] [of] [the] flag[[']s] [(in|of)] [the] [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s flag[[']s]
+	ExprBarPlayers:
+		ID: ExprBarPlayers
+		Return type: Player
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[skellett] [(the|all)] [of] [the] player[[']s] [(in|of)] [the] [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s player[[']s]
+	ExprBarProgress:
+		ID: ExprBarProgress
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] progress of [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s [[boss][ ]bar] progress
+	ExprBarStyle:
+		ID: ExprBarStyle
+		Return type: barstyle
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] style of [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s [[boss][ ]bar] style
+	ExprBarTitle:
+		ID: ExprBarTitle
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] (title|name|header|string) of [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s [boss[ ]]bar (title|name|header|string)
+	ExprBarVisible:
+		ID: ExprBarVisible
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] visib(le|ility) [(for|of)] [boss[ ]]bar %bossbar%
+			[skellett] %bossbar%'s [[boss][ ]bar] visib(le|ility)
+	ExprBlockFaceFromDirection:
+		ID: ExprBlockFaceFromDirection
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] [block[ ]]face of [block] %block% from %direction%
+			[block] %block%'s [block[ ]]face from %direction%
+	ExprBlockGetDrops:
+		ID: ExprBlockGetDrops
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [possible] drop[(ped|s)] [items] (from|of) [block [at]] %location% [(with|using) %-itemstack%]
+	ExprBlockGetPower:
+		ID: ExprBlockGetPower
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			[redstone] power [[being] receiv(ed|ing)] [(from|at)] %location%
+			%location% [redstone] power [[being] received]
+	ExprBlockHardness:
+		ID: ExprBlockHardness
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[the] block (break delay|durability|hardness) of [all] %block%
+			[all] %block%'s block (break delay|durability|hardness)
+	ExprBlockXP:
+		ID: ExprBlockXP
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[dropped] block[[']s] (xp|experience)
+	ExprBookAuthor:
+		ID: ExprBookAuthor
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] [book['s]] author of %itemstack%
+			%itemstack%'s [book] author
+	ExprBookGeneration:
+		ID: ExprBookGeneration
+		Return type: bookgeneration
+		Changers:
+			set
+		Patterns:
+			[the] [book['s]] generation %itemstack%
+			%itemstack%'s [book] generation
+	ExprBookPage:
+		ID: ExprBookPage
+		Return type: Text
+		Changers:
+			add
+			set
+			delete
+			reset
+		Patterns:
+			[the] [book['s]] page %number% (of|in) [book] %itemstack%
+			%itemstack%'s [book] page %number%
+	ExprBookPages:
+		ID: ExprBookPages
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[(the|all)] [of] [the] [book] pages [(from|of)] [book] %itemstack%
+	ExprBookTitle:
+		ID: ExprBookTitle
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] [book['s]] title of %itemstack%
+			%itemstack%'s [book] title
+	ExprBreakable:
+		ID: ExprBreakable
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[skellett] [a[n]] %itemstacks% [to be] breakable
+			[skellett] [a[n]] break(ing|able) %itemstacks%
+	ExprBreedState:
+		ID: ExprBreedState
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] breeding state of [entity] %entity%
+			[entity] %entity%'s breeding state
+	ExprBreedingBreeder:
+		ID: ExprBreedingBreeder
+		Return type: Living Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			breeder
+	ExprBreedingEntity:
+		ID: ExprBreedingEntity
+		Return type: Living Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[final] bre[e]d[ed] entity
+	ExprBreedingFather:
+		ID: ExprBreedingFather
+		Return type: Living Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			bre[e]d[ing] father
+	ExprBreedingItem:
+		ID: ExprBreedingItem
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			bre[e]d[ing] (item|material) [used]
+	ExprBreedingMother:
+		ID: ExprBreedingMother
+		Return type: Living Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			bre[e]d[ing] mother
+	ExprBreedingXP:
+		ID: ExprBreedingXP
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			bre[e]d[ing] (xp|experience)
+	ExprBrewingFuelConsuming:
+		ID: ExprBrewingFuelConsuming
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[(the|is)] brew[ing] [stand[s]] consuming [state]
+	ExprBrewingFuelPower:
+		ID: ExprBrewingFuelPower
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[skellett] [the] brew[ing] [stand[[']s]] fuel [power]
+			[skellett] [the] fuel [power] of [the] brew[ing] [stand]
+			[skellett] event-fuel[power]
+	ExprBrewingInventory:
+		ID: ExprBrewingInventory
+		Return type: brewerinventory
+		Changers:
+			none
+		Patterns:
+			[skellett] [event] brew[ing] [stand] inventory
+			[skellett] event-brewinginventory
+	ExprBrewingInventoryFuel:
+		ID: ExprBrewingInventoryFuel
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			(fuel|burning) [item] (of|in) [brew[ing] stand] [inventory] %brewerinventory%
+			[brew[ing] stand] %brewerinventory%'s (fuel|burning) [item]
+	ExprBrewingInventoryFuelTime:
+		ID: ExprBrewingInventoryFuelTime
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[brew[ing]] fuel time (of|in) [brew[ing] stand] [inventory] %brewerinventory%
+			[brew[ing] stand] %brewerinventory%'s [brew[ing]] fuel time
+	ExprBrewingInventoryIngredient:
+		ID: ExprBrewingInventoryIngredient
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			ingredient [item] (of|in) [brew[ing] stand] [inventory] %brewerinventory%
+			[brew[ing] stand] %brewerinventory%'s ingredient [item]
+	ExprBrewingInventoryTime:
+		ID: ExprBrewingInventoryTime
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[brew[ing]] time (of|in) brew[ing] [stand] [inventory] %brewerinventory%
+			brew[ing] [stand] %brewerinventory%'s [brew[ing]] time
+	ExprCanvasPixel:
+		ID: ExprCanvasPixel
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] map pixle [colo[u]r] at [coordinate[s]] [x] %number%(,| and) [y] %number% (on|in) [skellett] map %map%
+	ExprChunkOutlineBlocks:
+		ID: ExprChunkOutlineBlocks
+		Return type: Block
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+		Patterns:
+			[(the|all)] [of] [the] blocks [in [a[n]]] (around|outlin(e|ing)) [of] chunk %chunk% [[at] [y(-| )coordinate] %-number%]
+	ExprClickedAction:
+		ID: ExprClickedAction
+		Return type: Inventory Action
+		Changers:
+			none
+		Patterns:
+			(click[ed]|inventory) action
+	ExprClickedCursor:
+		ID: ExprClickedCursor
+		Return type: Item Type
+		Changers:
+			none
+		Patterns:
+			[the] [skellett] [click[ed]] cursor
+	ExprClickedInventory:
+		ID: ExprClickedInventory
+		Return type: Inventory
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+		Patterns:
+			click[ed] inventory
+	ExprClickedItem:
+		ID: ExprClickedItem
+		Return type: Item Type
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] [click[ed]] item
+	ExprClickedRawSlot:
+		ID: ExprClickedRawSlot
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			click[ed] raw slot
+	ExprClickedRow:
+		ID: ExprClickedRow
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] click[ed] row
+	ExprClickedSlot:
+		ID: ExprClickedSlot
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] click[ed] slot
+	ExprClickedSlotType:
+		ID: ExprClickedSlotType
+		Return type: clickedslottype
+		Changers:
+			none
+		Patterns:
+			click[ed] slot type
+	ExprClickedType:
+		ID: ExprClickedType
+		Return type: Click Type
+		Changers:
+			none
+		Patterns:
+			[the] [skellett] click[ed] type
+	ExprClickedTypeNumber:
+		ID: ExprClickedTypeNumber
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			click[ed] type num[ber]
+	ExprClientBorderCenter:
+		ID: ExprClientBorderCenter
+		Return type: Location
+		Changers:
+			set
+		Patterns:
+			[client [side]] [world] border center [location] (for|of) %player%
+			%player%'s [client [side]] [world] border center [location]
+	ExprClientBorderDamageAmount:
+		ID: ExprClientBorderDamageAmount
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[client [side]] [world] border damage [amount] (for|of) %player%
+			%player%'s [client [side]] [world] border damage [amount]
+	ExprClientBorderDamageBuffer:
+		ID: ExprClientBorderDamageBuffer
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[client [side]] [world] border [damage] buffer (for|of) %player%
+			%player%'s [client [side]] [world] border [damage] buffer
+	ExprClientBorderSize:
+		ID: ExprClientBorderSize
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[client [side]] [world] border size (for|of) %player%
+			%player%'s [client [side]] [world] border size
+	ExprClientBorderWarningDistance:
+		ID: ExprClientBorderWarningDistance
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[client [side]] [world] border warning distance (for|of) %player%
+			%player%'s [client [side]] [world] border warning distance
+	ExprClientBorderWarningTime:
+		ID: ExprClientBorderWarningTime
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[client [side]] [world] border warning [time] (for|of) %player%
+			%player%'s [client [side]] [world] border warning [time]
+	ExprClientWeather:
+		ID: ExprClientWeather
+		Return type: Object
+		Changers:
+			set
+		Patterns:
+			[skellett] [client] weather of %player%
+	ExprCollidableState:
+		ID: ExprCollidableState
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			collid(e|able) [state] [of] %entity%
+	ExprCropState:
+		ID: ExprCropState
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			crop state of %block%
+			%block%'s crop state
+	ExprCursorCoordinate:
+		ID: ExprCursorCoordinate
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] map cursor (1¦x|2¦y)(-| )(coord[inate]|pos[ition]|loc[ation])[s] of [[map][ ]cursor] %mapcursor%
+	ExprCursorDirection:
+		ID: ExprCursorDirection
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] map cursor direction (of|for) [[map][ ]cursor] %mapcursor%
+	ExprCursorType:
+		ID: ExprCursorType
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[skellett] map cursor type (of|for) [[map][ ]cursor] %mapcursor%
+	ExprCursorVisible:
+		ID: ExprCursorVisible
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] map cursor visibl(e|ity) [state] (of|for) [[map][ ]cursor] %mapcursor%
+	ExprCustomExpression:
+		ID: ExprCustomExpression
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[event] method %string% [is [a] loop[able] %-boolean%] [(from|of) [(expression|type|class)] %-object%] [with parameter[s] %-objects%]
+	ExprCustomName:
+		ID: ExprCustomName
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[skellett] custom name of %entity%
+	ExprCustomNameVisible:
+		ID: ExprCustomNameVisible
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] custom name visib(le|ility) of %entity%
+			[skellett] visib(le|ility) of %entity%'s custom name
+	ExprDataWatcher:
+		ID: ExprDataWatcher
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			data watcher value %number% from %entity%
+	ExprDataWatcherType:
+		ID: ExprDataWatcherType
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			data watcher type (of|from) %*object%
+	ExprDyedArmour:
+		ID: ExprDyedArmour
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[skellett] [dye[d]] [colo[u]r] [of] %itemstack% [to] (colo[u]r[ed]|dyed) %color%
+	ExprEnchantmentNumber:
+		ID: ExprEnchantmentNumber
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] enchant[ment] level (from|of) %enchantment% (of|in|on) %itemstack%
+			[skellett] %itemstack%'s enchant[ment] level (from|of|on) %enchantment%
+	ExprEnchantmentOfferCost:
+		ID: ExprEnchantmentOfferCost
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[the] cost of [enchant[ment]] offer %enchantmentoffer%
+			offer %enchantmentoffer%'s [enchant[ment]] cost
+	ExprEnchantmentOfferEnchantLevel:
+		ID: ExprEnchantmentOfferEnchantLevel
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[the] level of [enchant[ment]] offer %enchantmentoffer%
+			offer %enchantmentoffer%'s [enchant[ment]] level
+	ExprEnchantmentOfferEnchantment:
+		ID: ExprEnchantmentOfferEnchantment
+		Return type: Enchantment
+		Changers:
+			set
+		Patterns:
+			[the] enchant[ment] of [enchant[ment]] offer %enchantmentoffer%
+			offer %enchantmentoffer%'s [enchant[ment]] enchant[ment]
+	ExprEnchantmentOffers:
+		ID: ExprEnchantmentOffers
+		Return type: enchantmentoffer
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] enchant[ment] offers
+	ExprEnchantments:
+		ID: ExprEnchantments
+		Return type: Enchantment
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] enchant[ment]s (on|of|from) %itemstack%
+	ExprEnderCrystalBase:
+		ID: ExprEnderCrystalBase
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[ender] crystal base [visib(le|ility)] [state] of %entity%
+			%entity%'s [ender] crystal base [visib(le|ility)] [state]
+	ExprEnderCrystalBeam:
+		ID: ExprEnderCrystalBeam
+		Return type: Location
+		Changers:
+			set
+			remove
+			remove all
+			delete
+			reset
+		Patterns:
+			[ender] crystal (target|beam) [location] of %entity%
+			%entity%'s [ender] crystal (target|beam) [location]
+	ExprEntityFarAway:
+		ID: ExprEntityFarAway
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] [(despawn|remove|clear)] [get] %entity% when [it([']s| is)] far away [state]
+	ExprEntityFromUUID:
+		ID: ExprEntityFromUUID
+		Return type: Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[skellett] entity (from [the]|of) (uuid|[universal] unique id) %string%
+	ExprEntityID:
+		ID: ExprEntityID
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] [entity] [number] id (of|from) %entities%
+			%entities%'s [entity] [number] id
+	ExprEntityScoreboardTag:
+		ID: ExprEntityScoreboardTag
+		Return type: Text
+		Changers:
+			add
+			remove
+		Patterns:
+			[(the|all)] [of] [the] scoreboard tag[s] (of|from) %entity%
+			%entity%'s scoreboard tag[s]
+	ExprEntityUUID:
+		ID: ExprEntityUUID
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[skellett] entity (uuid|[universal] unique id) of [entity] %entity%
+			[entity] %entity%'s entity (uuid|[universal] unique id)
+	ExprEntries:
+		ID: ExprEntries
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] (score[ ][board]|board)[[']s] entr(ies|y[[']s]) [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprEventMap:
+		ID: ExprEventMap
+		Return type: map
+		Changers:
+			none
+		Patterns:
+			[skellett] [the] event[(-| )]map
+	ExprExhaustion:
+		ID: ExprExhaustion
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			exhaustion of %player%
+			%player%'s exhaustion
+	ExprFallDistance:
+		ID: ExprFallDistance
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[the] fall distance (from|of) %entity%
+			%entity%'s fall distance
+	ExprFinalDamage:
+		ID: ExprFinalDamage
+		Return type: double
+		Changers:
+			none
+		Patterns:
+			[skellett] final damage
+	ExprFishingGetCaught:
+		ID: ExprFishingGetCaught
+		Return type: Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[skellett] caught (fish|item|entity)
+	ExprFishingGetHook:
+		ID: ExprFishingGetHook
+		Return type: Projectile
+		Changers:
+			none
+		Patterns:
+			[skellett] [fishing] hook
+	ExprFishingState:
+		ID: ExprFishingState
+		Return type: fishingstate
+		Changers:
+			none
+		Patterns:
+			[skellett] [fish[ing]] state
+	ExprFixFishingGetXP:
+		ID: ExprFixFishingGetXP
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[the] [fish[ing]] (xp|experience) [earned]
+	ExprFunctions:
+		ID: ExprFunctions
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [loaded] functions
+	ExprFuseTime:
+		ID: ExprFuseTime
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[skellett] (fuse time|time until blowup) of [the] [primed] [tnt] %entity%
+			[skellett] [primed] [tnt] %entity%['s] (fuse time|time until blowup)
+	ExprGetEntryScores:
+		ID: ExprGetEntryScores
+		Return type: scoreboard score
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] (score[ ][board]|[skellett[ ]]board) scores of [entry] %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+			[(the|all)] [of] [the] (score[ ][board]|[skellett[ ]]board) [entry] %string%'s scores [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprGetEntryTeam:
+		ID: ExprGetEntryTeam
+		Return type: scoreboard team
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|board) team of [entry] %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+			[the] (score[ ][board]|board) [entry] %string%'s team [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprGetObjective:
+		ID: ExprGetObjective
+		Return type: scoreboard objective
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprGetScoreboard:
+		ID: ExprGetScoreboard
+		Return type: scoreboard
+		Changers:
+			none
+		Patterns:
+			[get] (score[ ][board]|[skellett[ ]]board)) [(with|named)] [(name|id)] %string%
+	ExprGetTeam:
+		ID: ExprGetTeam
+		Return type: scoreboard team
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) %string% team [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+			(score[ ][board]|[skellett[ ]]board) [get] team %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprGlideState:
+		ID: ExprGlideState
+		Return type: Boolean
+		Changers:
+			set
+			reset
+		Patterns:
+			glide [state] [(of|for)] [entit(y|ies)] %entity%
+	ExprGlowingSpectralArrow:
+		ID: ExprGlowingSpectralArrow
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[spectral] arrow glowing time of %entity%
+			%entity%'s [spectral] arrow glowing time
+	ExprGravityState:
+		ID: ExprGravityState
+		Return type: Boolean
+		Changers:
+			set
+			remove all
+			reset
+		Patterns:
+			[skellett] gravity [state[s]] [(of|for)] [entit(y|ies)] %entities%
+			[skellett] %entities%'s gravity [state[s]]
+	ExprGroundState:
+		ID: ExprGroundState
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			[(is|are)] [on] [the] ground [state] [of] [entity] %entity%
+			[entity] %entity% [(is|are)] [on] [the] ground [state]
+	ExprHangingCause:
+		ID: ExprHangingCause
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] [un](hung|hang)[(ed|ing)] cause
+	ExprHangingRemover:
+		ID: ExprHangingRemover
+		Return type: Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[the] (hung|hang)[(ed|ing)] remover [entity]
+	ExprHideEnchants:
+		ID: ExprHideEnchants
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			%itemstacks% with hid(den|ing) enchant[ment][s]
+			[skellett] (shiny|hidden enchant[ment][s]|glow|glowing) [item] %itemstack%
+	ExprHitboxLength:
+		ID: ExprHitboxLength
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] hitbox length of %entity%
+			%entity%'s hitbox length
+			[the] length of %entity%'s hitbox
+	ExprHitboxWidth:
+		ID: ExprHitboxWidth
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] hitbox width of %entity%
+			%entity%'s hitbox width
+			[the] width of %entity%'s hitbox
+	ExprHotbarSwitchSlot:
+		ID: ExprHotbarSwitchSlot
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			[the] (1¦(past|previous)|2¦(new|future|present)) [changed] (hotbar|held|changed) slot
+	ExprImageFile:
+		ID: ExprImageFile
+		Return type: mapimage
+		Changers:
+			none
+		Patterns:
+			[skellett] [the] image (of|from) [the] file [(location|path)] %string%
+	ExprIndexes:
+		ID: ExprIndexes
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] indexes (of|[with]in) %~objects%
+	ExprInstaBreak:
+		ID: ExprInstaBreak
+		Return type: Boolean
+		Changers:
+			set
+			reset
+		Patterns:
+			[event] inst(ant|a) break [state]
+	ExprInventoryRows:
+		ID: ExprInventoryRows
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] (gui|menu|inventory|chest|window) row[s] (of|from) %inventory%
+			%inventory%'s (gui|menu|inventory|chest|window) row[s]
+	ExprInventorySize:
+		ID: ExprInventorySize
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] (gui|menu|inventory|chest|window) (size|number|slots) (of|from) %inventory%
+			%inventory%'s (gui|menu|inventory|chest|window) (size|number|slots)
+	ExprInventoryType:
+		ID: ExprInventoryType
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			inventory type of %inventory%
+			%inventory%'s inventory type
+	ExprInventoryViewers:
+		ID: ExprInventoryViewers
+		Return type: Living Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[(the|all)] [of] [the] [player[']s] view(er[s]|ing) [of] %inventory%
+	ExprInvulnerableState:
+		ID: ExprInvulnerableState
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			invulnerable state of %entity%
+			%entity%'s silent invulnerable
+	ExprItemCooldown:
+		ID: ExprItemCooldown
+		Return type: Number
+		Changers:
+			set
+			reset
+		Patterns:
+			[the] cool[ ]down of [(item|material)] %string% (for|of) %players%
+			[(item|material)] %string%'s cool[ ]down (for|of) %players%
+	ExprItemframeItem:
+		ID: ExprItemframeItem
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			[skellett] item (in|inside|within|of|from) item[ ]frame %entity%
+			[skellett] %entity%'s item[ ]frame item
+			[skellett] item[ ]frame %entity%'s item
+	ExprItemframeRotation:
+		ID: ExprItemframeRotation
+		Return type: rotation
+		Changers:
+			set
+		Patterns:
+			[skellett] rotation (of|from) item[ ]frame %entity%
+			[skellett] %entity%'s item[ ]frame rotation
+			[skellett] item[ ]frame %entity%'s rotation
+	ExprItemsInSlots:
+		ID: ExprItemsInSlots
+		Return type: Item / Material
+		Changers:
+			set
+			remove
+			remove all
+			delete
+			reset
+		Patterns:
+			[items (from|of|in)] slots %numbers% (from|of|in) %inventory%
+	ExprItemsWithinEntity:
+		ID: ExprItemsWithinEntity
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			[skellett] [get] item[s] (of|in|inside|within) entity %entity%
+	ExprJavaVersion:
+		ID: ExprJavaVersion
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] server[[']s] java version
+			[the] java version of [the] server
+	ExprLastCreatedBossBar:
+		ID: ExprLastCreatedBossBar
+		Return type: bossbar
+		Changers:
+			none
+		Patterns:
+			[the] last created [boss[ ]]bar
+	ExprLlamaColorType:
+		ID: ExprLlamaColorType
+		Return type: llamacolor
+		Changers:
+			set
+		Patterns:
+			Llama colo[u]r of %entity%
+			Llama %entity%'s colo[u]r
+			%entity%['s] Llama colo[u]r
+	ExprLlamaInventory:
+		ID: ExprLlamaInventory
+		Return type: llamainventory
+		Changers:
+			none
+		Patterns:
+			inventory of Llama %entity%
+			Llama inventory of %entity%
+	ExprLlamaInventoryDecor:
+		ID: ExprLlamaInventoryDecor
+		Return type: Item / Material
+		Changers:
+			set
+		Patterns:
+			[Llama] decor (of|in) [inventory] [of] [Llama] %llamainventory%
+			[Llama] %llamainventory%'s [inventory] decor
+	ExprLongDate:
+		ID: ExprLongDate
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			date (from|of) [(long|milliseconds)] %number%
+	ExprMapCenter:
+		ID: ExprMapCenter
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			center (1¦x|2¦z)[( |-)][(position|coord[inate])] (of|from|in) [map] %map%
+			%map%'s center (1¦x|2¦z)[( |-)][(position|coord[inate])]
+	ExprMapCursors:
+		ID: ExprMapCursors
+		Return type: mapcursor
+		Changers:
+			none
+		Patterns:
+			[skellett] [(the|all)] [of] [the] map cursors (in|on|for) [skellett] [map] %map%
+	ExprMapScale:
+		ID: ExprMapScale
+		Return type: mapscale
+		Changers:
+			set
+			reset
+		Patterns:
+			map (scale|size) of %map%
+			map %map%'s (scale|size)
+			(scale|size) of map %map%
+	ExprMapUnlimitedTracking:
+		ID: ExprMapUnlimitedTracking
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			unlimited [tracking] state (of|from|in) [map] %map%
+			[map] %map%'s unlimited [tracking] state
+	ExprMapWorld:
+		ID: ExprMapWorld
+		Return type: World
+		Changers:
+			set
+		Patterns:
+			world of map %map%
+			map %map%'s world
+	ExprMaterialItemType:
+		ID: ExprMaterialItemType
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] [spigot] material [name] (from|of) %itemtype%
+			%itemtype%'s [spigot] material [name]
+	ExprMaxDamageTicks:
+		ID: ExprMaxDamageTicks
+		Return type: Timespan
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[skellett] [maximum] damage delay of %entity%
+			[skellett] %entity%'s [maximum] damage delay
+	ExprMetadata:
+		ID: ExprMetadata
+		Return type: Object
+		Changers:
+			set
+			delete
+			reset
+		Patterns:
+			[(skellett|fixed)] meta[ ]data [value] %string% (of|in|within) %object%
+	ExprMethods:
+		ID: ExprMethods
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [event] methods
+	ExprMethodsOfObject:
+		ID: ExprMethodsOfObject
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] methods (from|of|in) [the] [expression] %object%
+	ExprNearbyEntities:
+		ID: ExprNearbyEntities
+		Return type: Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			[skellett] [(the|all)] [of] [the] [nearby] entit(y|ies) (within|in) [a] radius [of] %number%[(,| and) %-number%(,| and) %-number%] (within|around|near) %location%
+	ExprNewBook:
+		ID: ExprNewBook
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[a] new [written] book
+	ExprNewBossBar:
+		ID: ExprNewBossBar
+		Return type: bossbar
+		Changers:
+			none
+		Patterns:
+			[skellett] [create] [a] new [boss[ ]]bar [with flag %-barflag%]
+	ExprNewInventory:
+		ID: ExprNewInventory
+		Return type: Inventory
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+		Patterns:
+			[a] new inv[entory] [with type] %string% [with %-number% row[s]] [named %-string%]
+	ExprNewMap:
+		ID: ExprNewMap
+		Return type: map
+		Changers:
+			none
+		Patterns:
+			[skellett] [a] new map[[ ]view] (for|from|with) [world] %world%
+	ExprNewMaterial:
+		ID: ExprNewMaterial
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[skellett] new [changed] material
+	ExprNewScoreboard:
+		ID: ExprNewScoreboard
+		Return type: scoreboard
+		Changers:
+			none
+		Patterns:
+			[create] [a] new (score[ ][board]|[skellett[ ]]board) [(with|named)] [(name|id)] %string%
+	ExprNewTextComponent:
+		ID: ExprNewTextComponent
+		Return type: textcomponent
+		Changers:
+			none
+		Patterns:
+			[a] [new] text component [with [text]] %string%
+	ExprNextEmptySlot:
+		ID: ExprNextEmptySlot
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			(next|first) empty slot of %inventory%
+	ExprNoItemNBT:
+		ID: ExprNoItemNBT
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			%itemstacks% with(out [any]| no) NBT
+	ExprNumbersOfString:
+		ID: ExprNumbersOfString
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[get] [the] (digit|num[ber])[s] (of|from|in) %string%
+	ExprObjectiveCriteria:
+		ID: ExprObjectiveCriteria
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective criteria [of] %objective%
+			[the] (score[ ][board]|[skellett[ ]]board) %objective%'s objective criteria
+	ExprObjectiveDisplayName:
+		ID: ExprObjectiveDisplayName
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective display name [(for|from|of)] %objective%
+			[the] (score[ ][board]|[skellett[ ]]board) %objective%['s] objective['s] display name
+			[the] (score[ ][board]|[skellett[ ]]board) objective %objective%['s] display name
+	ExprObjectiveDisplaySlot:
+		ID: ExprObjectiveDisplaySlot
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective [display] slot [(for|from|of)] %objective%
+			[the] (score[ ][board]|[skellett[ ]]board) %objective%['s] objective['s] [display] slot
+			[the] (score[ ][board]|[skellett[ ]]board) objective %objective%['s] [display] slot
+	ExprObjectiveGetScore:
+		ID: ExprObjectiveGetScore
+		Return type: scoreboard score
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) [objective] %objective%['s] score [(for|from|of)] [entry] %string%
+			[the] (score[ ][board]|[skellett[ ]]board) %objective%['s] [objective['s]] score [(for|from|of)] [entry] %string%
+	ExprObjectiveName:
+		ID: ExprObjectiveName
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective name [(for|from|of)] %objective%
+			[the] (score[ ][board]|[skellett[ ]]board) %objective%['s] objective['s] name
+			[the] (score[ ][board]|[skellett[ ]]board) objective %objective%['s] name
+	ExprObjectives:
+		ID: ExprObjectives
+		Return type: scoreboard objective
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [(score[ ][board]|board)[[']s]] objectives [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprObjectivesByCriteria:
+		ID: ExprObjectivesByCriteria
+		Return type: scoreboard objective
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] (score[ ][board]|board)[[']s] objectives (by|with) [criteria] %string% [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprOfflinePlayers:
+		ID: ExprOfflinePlayers
+		Return type: Offlineplayer
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] offline[ ]player[s]
+	ExprOperators:
+		ID: ExprOperators
+		Return type: Offlineplayer
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] Op[erator](s|ed) [players]
+	ExprPackets:
+		ID: ExprPackets
+		Return type: Object
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] packet (data|value|field) %string% [[is] [a] loop[able] %-boolean%]
+	ExprParticles:
+		ID: ExprParticles
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] particle[[ ]types]
+	ExprPistonPower:
+		ID: ExprPistonPower
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] piston[s] (power|toggle) [state] of %block%
+			%block%'s piston (power|toggle) [state]
+	ExprPistonReaction:
+		ID: ExprPistonReaction
+		Return type: pistonreaction
+		Changers:
+			none
+		Patterns:
+			[the] piston [move] reaction (of|from) %block%
+			%block%'s piston [move] reaction
+	ExprPlayerInventoryCursor:
+		ID: ExprPlayerInventoryCursor
+		Return type: Item Type
+		Changers:
+			set
+		Patterns:
+			[current [inventory]] cursor of %player%
+			%player%'s [current [inventory]] cursor
+	ExprPlayerPing:
+		ID: ExprPlayerPing
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[skellett] ping of [player] %player%
+			[skellett] %player%'s ping
+	ExprPlayerScoreboard:
+		ID: ExprPlayerScoreboard
+		Return type: scoreboard
+		Changers:
+			set
+			remove
+		Patterns:
+			(score[ ][board]|[skellett[ ]]board) of [player] %player%
+			%player%'s (score[ ][board]|[skellett[ ]]board)
+	ExprProjectileBounce:
+		ID: ExprProjectileBounce
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[skellett] %entity%[[']s] bounc(e|ing) [state]
+	ExprRedstoneCurrent:
+		ID: ExprRedstoneCurrent
+		Return type: integer
+		Changers:
+			add
+			set
+			remove
+			reset
+		Patterns:
+			[the] [skellett] (1¦(new|future)|2¦(old|past)) [event] [redstone] current
+	ExprRegeneratorBlocks:
+		ID: ExprRegeneratorBlocks
+		Return type: Block
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+		Patterns:
+			block[s] of [skellett] regenerator [[with] id] %string%
+	ExprRegeneratorPos1:
+		ID: ExprRegeneratorPos1
+		Return type: Location
+		Changers:
+			set
+		Patterns:
+			pos[ition][ ]1 of [skellett] regenerator [[with] id] %string%
+	ExprRegeneratorPos2:
+		ID: ExprRegeneratorPos2
+		Return type: Location
+		Changers:
+			set
+		Patterns:
+			pos[ition][ ]2 of [skellett] regenerator [[with] id] %string%
+	ExprRegenerators:
+		ID: ExprRegenerators
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] [skellett] regenerator[s] [ids]
+	ExprRemoveItemNBT:
+		ID: ExprRemoveItemNBT
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			%itemstacks% with [all] removed NBT
+			remove[ed] [all] NBT [from] %itemstacks%
+	ExprRepeaterDelay:
+		ID: ExprRepeaterDelay
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] [redstone] repeater[s] [(redstone|power)] delay of %block%
+			[redstone] repeater %block%'s [(redstone|power)] delay
+	ExprReturnType:
+		ID: ExprReturnType
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			[(|skript|skellett)] [the] return (type[s]|value[s]) [(from|of|in)] [the] [expression] %object%
+	ExprRoundDecimal:
+		ID: ExprRoundDecimal
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[Skellett] %number% round[ed] [to] [the] [nearest] %number% decimal (digit[s]|place[s])
+	ExprScore:
+		ID: ExprScore
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) (score|number|slot) [(for|from|of)] %score%
+			(score[ ][board]|[skellett[ ]]board) %score%'s (score|number|slot)
+	ExprScoreEntry:
+		ID: ExprScoreEntry
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) [get] entry [(for|from|of)] score %score%
+			(score[ ][board]|[skellett[ ]]board) %score%'s score entry
+	ExprScoreObjective:
+		ID: ExprScoreObjective
+		Return type: scoreboard objective
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) objective [(for|from|of)] score %score%
+			[the] (score[ ][board]|[skellett[ ]]board) %score%'s scores objective
+	ExprShootArrowSpeed:
+		ID: ExprShootArrowSpeed
+		Return type: float
+		Changers:
+			none
+		Patterns:
+			(arrow|shot|velocity) speed [of (shot|arrow)]
+	ExprShootGetArrow:
+		ID: ExprShootGetArrow
+		Return type: Entity
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] [(event|get)] [the] shot (arrow|projectile)
+	ExprShootGetBow:
+		ID: ExprShootGetBow
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[the] [skellett] [(event|get)] bow
+	ExprSilentState:
+		ID: ExprSilentState
+		Return type: Boolean
+		Changers:
+			set
+			remove all
+			reset
+		Patterns:
+			(silent|quiet) [state] [of] [entit(y|ies)] %entities%
+	ExprSkullBlockOwner:
+		ID: ExprSkullBlockOwner
+		Return type: Offlineplayer
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] skull[ ]owner of [skull] %block%
+			[skellett] [skull] %block%'s skull[ ]owner
+	ExprSkullRotation:
+		ID: ExprSkullRotation
+		Return type: Object
+		Changers:
+			set
+		Patterns:
+			[the] [skellett] skull[ ]rotation of [skull] %block% [in (1¦direction|2¦blockface)]
+			[skellett] [skull] %block%'s skull[ ]rotation [in (1¦direction|2¦blockface)]
+	ExprSleepIgnored:
+		ID: ExprSleepIgnored
+		Return type: Boolean
+		Changers:
+			set
+			reset
+		Patterns:
+			ignored sleep[ing] [state] of %player%
+	ExprSlimeSize:
+		ID: ExprSlimeSize
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			[skellett] slime size of %entity%
+			[skellett] %entity%'s slime size
+	ExprSneakState:
+		ID: ExprSneakState
+		Return type: Boolean
+		Changers:
+			set
+			reset
+		Patterns:
+			sneak[ing] [state] of %player%
+	ExprSpawnReason:
+		ID: ExprSpawnReason
+		Return type: spawnreason
+		Changers:
+			none
+		Patterns:
+			[the] spawn reason
+	ExprSpawnerDelay:
+		ID: ExprSpawnerDelay
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+		Patterns:
+			delay (of|from) spawner [at] %block%
+			%block%'s spawn[er] delay
+			spawn[er] delay (of|from) %block%
+	ExprSpawnerType:
+		ID: ExprSpawnerType
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			(entity|mob|creature) [type] (of|from) spawner [at] %block%
+			%block%'s spawn[er] (entity|mob|creature) [type]
+	ExprSpectate:
+		ID: ExprSpectate
+		Return type: Entity
+		Changers:
+			set
+			remove
+			delete
+			reset
+		Patterns:
+			(spec[tat(e|or|ing)]|view[ing]) [(target|state)] of %player%
+			%player%'s (spec[tat(e|or|ing)]|view[ing]) [(target|state)]
+	ExprSpreadSource:
+		ID: ExprSpreadSource
+		Return type: Block
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+		Patterns:
+			[spread] source block
+	ExprSprintState:
+		ID: ExprSprintState
+		Return type: Boolean
+		Changers:
+			set
+			reset
+		Patterns:
+			(sprint|run)[ing] [state] of %player%
+	ExprStatistics:
+		ID: ExprStatistics
+		Return type: Number
+		Changers:
+			add
+			set
+			remove
+			remove all
+			delete
+			reset
+		Patterns:
+			[the] stat[istic][s] %string% (of|from) %player% [[(with|from|for|of)] entity[[ ]type] %-string%] [[(with|from|for|of)] material %-string%]
+	ExprStylishPlayerBoard:
+		ID: ExprStylishPlayerBoard
+		Return type: scoreboard
+		Changers:
+			set
+			reset
+		Patterns:
+			[the] (stylish|style|simple) [score][ ][board] of %player%
+			%player%'s (stylish|style|simple) [score][ ][board]
+	ExprStylishSlotBoard:
+		ID: ExprStylishSlotBoard
+		Return type: scoreboard
+		Changers:
+			set
+		Patterns:
+			[skellett] [(update|edit)] [the] [(stylish|style|simple)] [score][ ]board [of] id [based] [score] [(with [id]|named)] %string%
+	ExprStylishSlotNumber:
+		ID: ExprStylishSlotNumber
+		Return type: Number
+		Changers:
+			set
+		Patterns:
+			[skellett] [(update|edit)] [the] slot [of] id [based] [score] [(with [id]|named)] %string%
+	ExprStylishSlotText:
+		ID: ExprStylishSlotText
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[skellett] [(update|edit)] [the] (text|name|display|data|string) [of] id [based] [score] [(with [id]|named)] %string%
+	ExprStylishTitle:
+		ID: ExprStylishTitle
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[skellett] [(update|edit)] [the] [display] title of (stylish|style|simple) [score][ ][board] [named] %string%
+			[skellett] [(update|edit)] [the] (stylish|style|simple) [score][ ][board] %string%['s] [display] title
+	ExprTargetReason:
+		ID: ExprTargetReason
+		Return type: targetreason
+		Changers:
+			none
+		Patterns:
+			[the] target reason
+	ExprTeamDisplayName:
+		ID: ExprTeamDisplayName
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[the] [(score[ ][board]|[skellett[ ]]board)] team display name [(for|from|of)] %team%
+	ExprTeamEntries:
+		ID: ExprTeamEntries
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] (score[ ][board]|[skellett[ ]]board)[[']s] entr(ies|y[[']s]) (in|within) [the] [team] %team%
+	ExprTeamFriendlyFire:
+		ID: ExprTeamFriendlyFire
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[the] [(score[ ][board]|[skellett[ ]]board)] friendly [fire] state [(for|of)] [team] %team%
+	ExprTeamFriendlyInvisibles:
+		ID: ExprTeamFriendlyInvisibles
+		Return type: Boolean
+		Changers:
+			set
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) [friendly] invisible[s] [state] [(for|of)] [team] %team%
+	ExprTeamName:
+		ID: ExprTeamName
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board)) [team] name [(for|of)] [team] %team%
+	ExprTeamOptions:
+		ID: ExprTeamOptions
+		Return type: teamoptionstatus
+		Changers:
+			set
+		Patterns:
+			[the] (score[ ][board]|[skellett[ ]]board) [team] option[s] [status] %teamoption% [(for|of)] [the] [team] %team%
+	ExprTeamPrefix:
+		ID: ExprTeamPrefix
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[(score[ ][board]|[skellett[ ]]board)] [team] prefix [(for|of)] [team] %team%
+	ExprTeamSize:
+		ID: ExprTeamSize
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[(score[ ][board]|[skellett[ ]]board)] team size [(for|of)] [team] %team%
+	ExprTeamSuffix:
+		ID: ExprTeamSuffix
+		Return type: Text
+		Changers:
+			set
+		Patterns:
+			[(score[ ][board]|[skellett[ ]]board)] [team] suffix [(for|of)] [team] %team%
+	ExprTeams:
+		ID: ExprTeams
+		Return type: scoreboard team
+		Changers:
+			none
+		Patterns:
+			[(the|all)] [of] [the] teams [[(in|from)] (score[ ][board]|[skellett[ ]]board) [%-scoreboard%]]
+	ExprTeleportCause:
+		ID: ExprTeleportCause
+		Return type: teleportcause
+		Changers:
+			none
+		Patterns:
+			[the] teleport cause
+	ExprTick:
+		ID: ExprTick
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] server tick[s]
+			[the] server's tick[s]
+			[the] tick[s] of [the] server
+	ExprTicksFromTime:
+		ID: ExprTicksFromTime
+		Return type: Number
+		Changers:
+			none
+		Patterns:
+			[the] tick[s] (of|from) [time[span]] %timespan%
+			[time[span]] %timespan%'s tick[s]
+	ExprUnbreakable:
+		ID: ExprUnbreakable
+		Return type: Item / Material
+		Changers:
+			none
+		Patterns:
+			[skellett] [a[n]] %itemstacks% [to be] unbreakable
+			[skellett] [a[n]] unbreak(ing|able) %itemstacks%
+	ExprUnleashHitch:
+		ID: ExprUnleashHitch
+		Return type: Entity
+		Changers:
+			add
+			remove
+			remove all
+		Patterns:
+			event-hitch
+	ExprUnleashReason:
+		ID: ExprUnleashReason
+		Return type: unleashreason
+		Changers:
+			none
+		Patterns:
+			(un(leash|lead)|(leash|lead) break) reason
+	ExprWorldChangeFrom:
+		ID: ExprWorldChangeFrom
+		Return type: World
+		Changers:
+			none
+		Patterns:
+			(previous|past) [changed] world
+	ExprWorldFolder:
+		ID: ExprWorldFolder
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			world folder of %world%
+	ExprWorldOfLocation:
+		ID: ExprWorldOfLocation
+		Return type: World
+		Changers:
+			set
+		Patterns:
+			[skellett] world (of|from) [location] %location%
